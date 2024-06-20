@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+}
+body {
+  background-color: rgb(247, 247, 247);
+}
+main {
+  padding: 1em;
+  display: grid;
+
+  margin: 0 auto;
+  max-width: 1200px;
+}
+#map {
+  height: 600px;
+  /* padding: 1em; */
+  /* width: 1000px; */
+}
+main input {
+  text-transform: none;
+  padding-left: 10px;
+}
+input,
+button {
+  padding: 6px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  border: none;
+  margin-top: 10px;
+}
+input::placeholder{
+    text-transform: capitalize;
+}
+input:focus{
+    outline: crimson 1px solid;
+}
+button {
+  background-color: crimson;
+  color: antiquewhite;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+  width: 100%;
+  color: #ff0000;
+  font-weight: 600;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* display: block; */
+}
+.leaflet-tile-pane {
+  filter: grayscale(0%);
+}
+.details p{
+    border-right: 2px solid white;
+    padding: 5px;
+    text-align: center;
+}
+.leaflet-marker-icon {
+  color: #ff0000;
+}
+.leaflet-control-zoom {
+  background-color: rgba(60, 58, 61, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.leaflet-control-scale-line {
+  /* Customize scale control */
+  border: 2px solid #a8a7a8;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* padding: 6px; */
+  gap: 1em;
+  background-color: crimson;
+  margin-top: 10px;
+  color: white;
+  height: max-content;
+}
+header {
+  display: flex;
+  padding: 1em;
+  /* text-align: center; */
+}
+
+@media (max-width: 960px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+    /* padding: 10px; */
+    border-radius: 5px;
+    height: auto;
+  }
+  .details p{
+    border: none;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid white;
+  }
+  button{
+    border-radius: 5px;
+  }
+}
